@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ukarfood.Controller.FournisseurController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #1291db;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <FontAwesomeIcon fill="WHITE" glyphName="TRUCK" layoutX="20.0" layoutY="41.0" selectionFill="#ffffff00" size="29px" text=" Fournisseur " wrappingWidth="215.0" />
+         </children>
+      </Pane>
+      <Text fill="#1291db" layoutX="310.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des fournisseur " wrappingWidth="166.13671875">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TableView fx:id="listView" layoutX="63.0" layoutY="228.0" prefHeight="409.0" prefWidth="618.0" />
+      <FontAwesomeIcon glyphName="REFRESH" layoutX="756.0" layoutY="560.0" size="40px" text="" onMouseClicked="#Actualiser">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.8175154328346252" blue="0.004629629664123058" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon glyphName="USER_PLUS" layoutX="749.0" layoutY="331.0" size="40px" onMouseClicked="#AjoutClick">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.2879999876022339" green="0.800000011920929" blue="0.3465142846107483" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon glyphName="EDIT" layoutX="753.0" layoutY="412.0" size="40px" onMouseClicked="#ModifyClick">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07649999856948853" green="0.5946955680847168" blue="0.8500000238418579" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon onMouseClicked="#SupprimerList" glyphName="TRASH" layoutX="756.0" layoutY="486.0" size="40px" text="">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9342105388641357" green="0.33735379576683044" blue="0.33735379576683044" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </FontAwesomeIcon>
+      <TextField fx:id="BarRecherche" layoutX="145.0" layoutY="155.0" prefHeight="30.0" prefWidth="497.0" promptText="Recherche de fournisseur" style="-fx-background-color: transparent; -fx-background-radius: 5px; -fx-border-color: #1291db; -fx-font-size: 14px;" />
+      <FontAwesomeIcon fill="#1291db" glyphName="SEARCH" layoutX="653.0" layoutY="180.0" size="30px" onMouseClicked="#RechercheFrns"/>
+
+   </children>
+</AnchorPane>

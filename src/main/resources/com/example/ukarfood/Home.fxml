@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BubbleChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.ukarfood.Controller.HomeController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <BubbleChart alternativeRowFillVisible="false" cacheShape="false" horizontalZeroLineVisible="false" layoutX="130.0" layoutY="245.0" legendSide="TOP" prefHeight="392.0" prefWidth="617.0" verticalZeroLineVisible="false">
+            <xAxis>
+                <NumberAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+            <effect>
+                <Bloom />
+            </effect>
+        </BubbleChart>
+        <Pane layoutX="80.0" layoutY="36.0" prefHeight="175.0" prefWidth="147.0" style="-fx-background-color: #e68f0d;">
+            <effect>
+                <DropShadow height="70.83" radius="31.25" spread="0.06" width="56.17" />
+            </effect>
+        </Pane>
+        <Pane layoutX="661.0" layoutY="36.0" prefHeight="175.0" prefWidth="147.0" style="-fx-background-color: #e68f0d;">
+            <effect>
+                <DropShadow height="56.17" radius="27.585" spread="0.06" width="56.17" />
+            </effect>
+        </Pane>
+        <Pane layoutX="466.0" layoutY="36.0" prefHeight="175.0" prefWidth="147.0" style="-fx-background-color: #e68f0d;">
+            <effect>
+                <DropShadow height="56.17" radius="27.585" spread="0.06" width="56.17" />
+            </effect>
+        </Pane>
+        <Pane layoutX="271.0" layoutY="36.0" prefHeight="175.0" prefWidth="147.0" style="-fx-background-color: #e68f0d;">
+            <effect>
+                <DropShadow height="56.17" radius="27.585" spread="0.06" width="56.17" />
+            </effect>
+        </Pane>
+    </children>
+</AnchorPane>
