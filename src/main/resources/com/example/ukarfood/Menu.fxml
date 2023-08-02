@@ -101,7 +101,7 @@
                   <Font size="23.0" />
                </font>
             </FontAwesomeIcon>
-            <Button layoutX="22.0" layoutY="648.0" mnemonicParsing="false" style="-fx-background-color: #e68f0d;" text="LOG OUT" />
+            <Button onAction="#Logout" layoutX="22.0" layoutY="648.0" mnemonicParsing="false" style="-fx-background-color: #e68f0d;" text="LOG OUT" />
          </children></AnchorPane>
    </left>
    <center>
