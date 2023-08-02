@@ -15,6 +15,8 @@ public class Menu extends Application {
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
         primaryStage.show();
+        HelloApplication obj = new HelloApplication();
+        obj.setIcon(primaryStage);
     }
 
 

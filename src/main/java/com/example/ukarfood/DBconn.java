@@ -61,10 +61,8 @@ public class DBconn {
                     Stage stage = (Stage) userField.getScene().getWindow();
                     Stage primaryStage = new Stage();
                     Menu menu = new Menu();
-
                     stage.close();
                     menu.start(primaryStage);
-
                     System.out.println("Connecté...");
 
                 } else {

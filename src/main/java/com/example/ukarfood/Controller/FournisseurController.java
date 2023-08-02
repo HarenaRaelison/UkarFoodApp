@@ -162,9 +162,9 @@ if(BarRecherche.getText().equals("")){
     obj.ActualisationList(listView);
 }else{
     Connection Conn = DriverManager.getConnection(url, user, mdp);
-    String req = "SELECT * FROM fournisseur WHERE Nom_frns = ? ";
+    String req = "SELECT * FROM fournisseur WHERE Nom_frns LIKE ?";
     PreparedStatement statement = Conn.prepareStatement(req);
-    statement.setString(1,BarRecherche.getText());
+    statement.setString(1,BarRecherche.getText()+"%");
     ResultSet res = statement.executeQuery();
     ObservableList<Object> fournisseurs = FXCollections.observableArrayList();
     while (res.next()) {

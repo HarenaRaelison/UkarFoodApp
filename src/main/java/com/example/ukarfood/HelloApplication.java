@@ -17,11 +17,11 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
+        setIcon(stage);
 
     }
     public void setIcon(Stage stage) throws IOException {
         Image Icon = new Image(getClass().getResource("/images/icons8-fast-food-38.png").openStream());
-
         stage.getIcons().add(Icon);
     }
     public static void main(String[] args) {

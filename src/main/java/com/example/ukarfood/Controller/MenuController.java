@@ -13,7 +13,7 @@ public class MenuController {
     @FXML
     private AnchorPane anchorPane;
     @FXML
-    private BorderPane borderPane;
+    public BorderPane borderPane;
     @FXML
     public void btnFournisseurClick() {
 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ukarfood/Fournisseur.fxml"));
@@ -61,6 +61,7 @@ Parent IngredientContent;
         Parent HomeContent ;
         try {
          HomeContent = loader.load();
+
         } catch(IOException e) {
             throw new RuntimeException(e);
         }
@@ -76,9 +77,7 @@ Parent IngredientContent;
         }
         anchorPane.getChildren().setAll(AboutUsContent);
     }public void initialize() throws IOException {
-        HelloApplication obj = new HelloApplication();
-        Stage border = (Stage) borderPane.getScene().getWindow();
-        obj.setIcon(border);
+
         btnHomeClick();
 
     }

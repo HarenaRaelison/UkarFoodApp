@@ -96,8 +96,6 @@
             </LinearGradient>
          </fill>
       </FontAwesomeIcon>
-      <TextField fx:id="BarRecherche" layoutX="145.0" layoutY="155.0" prefHeight="30.0" prefWidth="497.0" promptText="Recherche de fournisseur" style="-fx-background-color: transparent; -fx-background-radius: 5px; -fx-border-color: #1291db; -fx-font-size: 14px;" />
-      <FontAwesomeIcon fill="#1291db" glyphName="SEARCH" layoutX="653.0" layoutY="180.0" size="30px" onMouseClicked="#RechercheFrns"/>
-
+      <TextField onKeyReleased="#RechercheFrns" fx:id="BarRecherche" layoutX="145.0" layoutY="155.0" prefHeight="30.0" prefWidth="497.0" promptText="Recherche de fournisseur" style="-fx-background-color: transparent; -fx-background-radius: 5px; -fx-border-color: #1291db; -fx-font-size: 14px;" />
    </children>
 </AnchorPane>
