@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 
+
 public class AchatController {
     String url = "jdbc:mysql://localhost:3308/ukarfood?characterEncoding=UTF-8";
     String user = "root";
@@ -129,6 +130,8 @@ public void btnActualisation(){
         int res = statement.executeUpdate();
         if(res!=0){
             System.out.println("SUccesFully");
+            //actualisation no tsy ampy
+
         }else{
             System.out.println("Error");
         }
