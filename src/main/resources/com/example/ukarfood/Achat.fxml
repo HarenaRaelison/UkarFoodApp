@@ -60,13 +60,13 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <DatePicker layoutX="576.0" layoutY="72.0" promptText="Choisir la date d'achat" />
+            <DatePicker fx:id="dateAchat" layoutX="576.0" layoutY="72.0" promptText="Choisir la date d'achat" />
             <Label layoutX="493.0" layoutY="75.0" text="Date Input:" textFill="#000000b0">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button layoutX="538.0" layoutY="186.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="185.0" text="Stocker l'Achat" />
+            <Button onMouseClicked="#btnEnregistrementAchat" layoutX="538.0" layoutY="186.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="185.0" text="Stocker l'Achat" />
             <Button layoutX="313.0" layoutY="72.0" mnemonicParsing="false" text="Frns+" onMouseClicked="#FenetreFrnsAjout"/>
             <Button layoutX="313.0" layoutY="118.0" mnemonicParsing="false" text="Ingr+" />
          </children>
