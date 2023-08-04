@@ -1,0 +1,16 @@
+.Anchor{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 2);
+    -fx-background-color: #9fbce0;
+    -fx-border-color: transparent;
+
+
+}
+.Anchor .pane {
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-color:  #1291db;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10px;
+}
+

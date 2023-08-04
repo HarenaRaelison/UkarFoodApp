@@ -24,6 +24,7 @@ public class HelloController {
 
     }
 
+
     public void ouverturePassOublier() throws IOException {
         Stage primaryStage = (Stage) userField.getScene().getWindow();
         primaryStage.close();
