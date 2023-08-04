@@ -39,8 +39,13 @@ public class AchatController {
             IngrNameBox.getItems().add(res.getString("nom_ingr"));
         }
     }
-    public void TotalsetText(){
-
+    public void TotalsetText() throws SQLException {
+      if(qte.getText().isEmpty() || Prix.getText().isEmpty()){
+          total.setText("0.0 Ariary");
+      }else{
+          int totaux = Integer.parseInt(Prix.getText())*Integer.parseInt(qte.getText());
+          total.setText(totaux +" Ariary");
+      }
     }
 
     public void FenetreFrnsAjout() throws IOException {
@@ -48,10 +53,11 @@ public class AchatController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ukarfood/Ajoutmodale.fxml"));
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
         HelloApplication obj = new HelloApplication();
         obj.setIcon(stage);
-        stage.initStyle(StageStyle.UNDECORATED);
+
 
     }
 

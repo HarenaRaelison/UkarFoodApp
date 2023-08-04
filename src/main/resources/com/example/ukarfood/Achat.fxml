@@ -43,8 +43,8 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="qte" layoutX="152.0" layoutY="207.0" promptText="Entrez la quantité d'achat" />
-            <TextField fx:id="Prix" layoutX="152.0" layoutY="163.0" promptText="Entrez le prix" />
+            <TextField fx:id="qte" layoutX="152.0" layoutY="207.0" promptText="Entrez la quantité d'achat" onKeyReleased="#TotalsetText"/>
+            <TextField fx:id="Prix" layoutX="152.0" layoutY="163.0" promptText="Entrez le prix" onKeyReleased="#TotalsetText"/>
             <Label layoutX="109.0" layoutY="166.0" text="Prix:" textFill="#000000b0">
                <font>
                   <Font size="14.0" />
