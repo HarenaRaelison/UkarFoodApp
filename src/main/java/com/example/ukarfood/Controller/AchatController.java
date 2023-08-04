@@ -122,7 +122,7 @@ public void btnActualisation(){
         statement.setInt(1,getIdfrns(FrnsNameBox));
         statement.setInt(2,getIdIngr(IngrNameBox));
         statement.setInt(3,Integer.parseInt(qte.getText()));
-        statement.setInt(4,Integer.parseInt(Prix.getText()));
+        statement.setInt(4,Integer.parseInt(tt[0]));
         statement.setDate(5,Date.valueOf(date));
 
 
