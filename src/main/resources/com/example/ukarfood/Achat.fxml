@@ -5,7 +5,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -26,7 +25,7 @@
             <DropShadow radius="7.8025" width="12.21" />
          </effect>
          <children>
-            <ComboBox fx:id="FrnsNameBox" layoutX="151.0" layoutY="72.0" prefWidth="150.0" promptText="Choisir" onMouseClicked="#BoxlistFrns" />
+            <ComboBox fx:id="FrnsNameBox" layoutX="151.0" layoutY="72.0" onMouseClicked="#BoxlistFrns" prefWidth="150.0" promptText="Choisir" />
             <Label layoutX="61.0" layoutY="74.0" text="Fournisseur:" textFill="#000000b0">
                <font>
                   <Font size="14.0" />
@@ -37,14 +36,14 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ComboBox fx:id="IngrNameBox" layoutX="151.0" layoutY="118.0" prefWidth="150.0" promptText="Choisir" onMouseClicked="#BoxIngrList"/>
+            <ComboBox fx:id="IngrNameBox" layoutX="151.0" layoutY="118.0" onMouseClicked="#BoxIngrList" prefWidth="150.0" promptText="Choisir" />
             <Label layoutX="81.0" layoutY="210.0" text="Quantité:" textFill="#000000b0">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="qte" layoutX="152.0" layoutY="207.0" promptText="Entrez la quantité d'achat" onKeyReleased="#TotalsetText"/>
-            <TextField fx:id="Prix" layoutX="152.0" layoutY="163.0" promptText="Entrez le prix" onKeyReleased="#TotalsetText"/>
+            <TextField fx:id="qte" layoutX="152.0" layoutY="207.0" onKeyReleased="#TotalsetText" promptText="Entrez la quantité d'achat" />
+            <TextField fx:id="Prix" layoutX="152.0" layoutY="163.0" onKeyReleased="#TotalsetText" promptText="Entrez le prix" />
             <Label layoutX="109.0" layoutY="166.0" text="Prix:" textFill="#000000b0">
                <font>
                   <Font size="14.0" />
@@ -55,7 +54,7 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Label layoutX="538.0" layoutY="133.0" text="Total:" textFill="#000000b0" >
+            <Label layoutX="538.0" layoutY="133.0" text="Total:" textFill="#000000b0">
                <font>
                   <Font size="14.0" />
                </font>
@@ -66,21 +65,13 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button onMouseClicked="#btnEnregistrementAchat" layoutX="538.0" layoutY="186.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="185.0" text="Stocker l'Achat" />
-            <Button layoutX="313.0" layoutY="72.0" mnemonicParsing="false" text="Frns+" onMouseClicked="#FenetreFrnsAjout"/>
+            <Button layoutX="538.0" layoutY="186.0" mnemonicParsing="false" onMouseClicked="#btnEnregistrementAchat" prefHeight="32.0" prefWidth="185.0" text="Stocker l'Achat" />
+            <Button layoutX="313.0" layoutY="72.0" mnemonicParsing="false" onMouseClicked="#FenetreFrnsAjout" text="Frns+" />
             <Button layoutX="313.0" layoutY="118.0" mnemonicParsing="false" text="Ingr+" />
          </children>
       </Pane>
-      <TableView layoutX="7.0" layoutY="444.0" prefHeight="250.0" prefWidth="844.0">
-        <columns>
-          <TableColumn prefWidth="104.0" text="IF Fournisseur" />
-          <TableColumn prefWidth="111.0" text="ID Ingrédient" />
-            <TableColumn prefWidth="111.0" text="Quantité" />
-            <TableColumn prefWidth="138.0" text="Prix Total" />
-            <TableColumn prefWidth="379.0" text="Date Input" />
-        </columns>
-      </TableView>
       <DatePicker layoutX="250.0" layoutY="410.0" prefHeight="25.0" prefWidth="221.0" promptText="Search Date" />
       <FontAwesomeIcon glyphName="SEARCH" layoutX="217.0" layoutY="427.0" />
+      <TableView fx:id="listView" layoutX="8.0" layoutY="443.0" prefHeight="251.0" prefWidth="844.0" />
    </children>
 </AnchorPane>

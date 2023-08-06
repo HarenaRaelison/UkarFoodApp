@@ -130,17 +130,33 @@ public class DBconn {
             e.printStackTrace();
         }
     }
+    public void List(TableView<Object> tableView) throws SQLException {
+        String req ="SELECT * FROM achat";
+        Connection conn = DriverManager.getConnection(url, user, mdp);
+             PreparedStatement statement = conn.prepareStatement(req);
+             ResultSet res = statement.executeQuery();
+            ObservableList<Object> buy = FXCollections.observableArrayList();
+            while (res.next()){
+                String id_fournisseur = String.valueOf(res.getInt("id_fournisseur"));
+                String id_ingredient = String.valueOf(res.getInt("id_ingredient"));
+                String qte = String.valueOf(res.getInt("quantite"));
+                String prix =  String.valueOf(res.getInt("prix_total"));
+                String date = String.valueOf(res.getDate("date_achat"));
+                Achat achat = new Achat(id_fournisseur, id_ingredient, qte, prix, date);
+                buy.add(achat);
+            }
+            tableView.setItems(buy);
+    }
     public void ActualisationList(TableView<Object> tableView) throws SQLException {
         Connection Conn = DriverManager.getConnection(url, user, mdp);
         String req = "SELECT * FROM fournisseur";
         PreparedStatement statement = Conn.prepareStatement(req);
         ResultSet res = statement.executeQuery();
         ObservableList<Object> fournisseurs = FXCollections.observableArrayList();
-        while (res.next()) {
+        while (res.next()){
             String nom = res.getString("Nom_frns");
             String adresse = res.getString("adrs_frns");
             String telephone = res.getString("tel_frns");
-
             Fournisseur fournisseur = new Fournisseur(nom, adresse, telephone);
             fournisseurs.add(fournisseur);
         }
@@ -171,6 +187,38 @@ public class DBconn {
             return telephone;
         }
     }
+
+
+    public static class Achat {
+        private String id_frns;
+        private String id_Ingr;
+        private String qte;
+        private String prix;
+        private String date;
+
+        public Achat(String id_frns, String id_Ingr, String qte,String prix,String date) {
+            this.id_frns = id_frns;
+            this.id_Ingr = id_Ingr;
+            this.qte = qte;
+            this.prix = prix;
+            this.date = date;
+        }
+
+        public String getId_frns() {
+            return id_frns;
+        }
+        public String getId_ingr() {
+            return id_Ingr;
+        }
+        public String getQte() {return qte;}
+        public String getPrix() {return prix;}
+
+        public String getDate(){return date;}
+
+
+
+    }
+
 
 
 }
