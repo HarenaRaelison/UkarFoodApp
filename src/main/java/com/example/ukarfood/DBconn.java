@@ -220,5 +220,37 @@ public class DBconn {
     }
 
 
+    public static class Stock {
+        private String nom_ingr;
+        private int quantite;
+        private double prix_total;
+        private String date_achat;
+
+        public Stock(String nom_ingr, int quantite, int prix_total, String date_achat) {
+            this.nom_ingr = nom_ingr;
+            this.quantite = quantite;
+            this.prix_total = prix_total;
+            this.date_achat = date_achat;
+        }
+
+        public String getNom_ingr() {
+            return nom_ingr;
+        }
+
+        public int getQuantite() {
+            return quantite;
+        }
+
+        public double getPrix_total() {
+            return prix_total;
+        }
+
+        public String getDate_achat() {
+            return date_achat;
+        }
+    }
+
+
+
 
 }
