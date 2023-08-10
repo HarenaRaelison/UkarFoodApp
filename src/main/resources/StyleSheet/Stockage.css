@@ -1,0 +1,48 @@
+/* styles.css */
+
+/* Style pour les en-têtes de colonnes */
+.table-view .column-header {
+    -fx-background-color: #1490d9;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Style pour les cellules du tableau */
+.table-row-cell {
+    -fx-background-color: #f7f7f7;
+}
+
+/* Style pour les lignes de tableau alternées */
+.table-row-cell:odd {
+    -fx-background-color: #eaeaea;
+}
+/* styles.css */
+
+/* Style pour le titre du panneau */
+.label-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1490d9;
+}
+
+/* Style pour les champs de texte */
+.text-field {
+    -fx-pref-height: 35px;
+}
+
+/* Style pour les boutons */
+.button {
+    -fx-pref-height: 30px;
+    -fx-background-color: #1490d9;
+    -fx-text-fill: white;
+}
+
+/* Style pour le panneau principal */
+.anchor-pane {
+    -fx-background-color: #f7f7f7;
+}
+
+/* Style pour le panneau latéral */
+.side-pane {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}

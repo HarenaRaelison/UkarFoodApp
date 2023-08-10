@@ -6,8 +6,8 @@
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -17,13 +17,13 @@
    <children>
       <AnchorPane fx:id="Anchor_up" layoutX="28.0" layoutY="23.0" prefHeight="204.0" prefWidth="802.0" style="-fx-border-radius: 10px;" styleClass="Anchor" stylesheets="@../../../StyleSheet/Home.css" AnchorPane.bottomAnchor="473.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="23.0">
          <effect>
-            <DropShadow />
+            <DropShadow height="18.07" radius="8.532499999999999" width="18.06" />
          </effect>
          <children>
-            <Pane layoutX="14.0" layoutY="14.0" prefHeight="166.0" prefWidth="238.0" styleClass="pane" stylesheets="@../../../StyleSheet/Home.css">
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="166.0" prefWidth="238.0" stylesheets="@../../../StyleSheet/Home.css">
                <children>
                   <FontAwesomeIcon fill="#ff6600d4" glyphName="USERS" layoutX="27.0" layoutY="72.0" size="40px" text="" />
-                  <Text fill="WHITE" fx:id="nombre_users" layoutX="119.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                  <Text fx:id="nombre_users" fill="WHITE" layoutX="119.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                      <font>
                         <Font size="36.0" />
                      </font>
@@ -38,7 +38,7 @@
                   <DropShadow height="25.4" radius="13.3" spread="0.15" width="29.8" />
                </effect>
             </Pane>
-            <Pane layoutX="282.0" layoutY="14.0" prefHeight="166.0" prefWidth="238.0" styleClass="pane" stylesheets="@../../../StyleSheet/Home.css">
+            <Pane layoutX="282.0" layoutY="14.0" prefHeight="166.0" prefWidth="238.0" stylesheets="@../../../StyleSheet/Home.css">
                <children>
                   <FontAwesomeIcon fill="#ff6600d4" glyphName="MONEY" layoutX="39.0" layoutY="67.0" size="40px" />
                   <Text fx:id="depense" fill="WHITE" layoutX="135.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
@@ -59,7 +59,7 @@
                   <DropShadow blurType="GAUSSIAN" height="28.68" radius="14.115" spread="0.15" width="29.78" />
                </effect>
             </Pane>
-            <Pane layoutX="550.0" layoutY="14.0" prefHeight="166.0" prefWidth="238.0" styleClass="pane" stylesheets="@../../../StyleSheet/Home.css">
+            <Pane layoutX="550.0" layoutY="14.0" prefHeight="166.0" prefWidth="238.0" stylesheets="@../../../StyleSheet/Home.css">
                <children>
                   <FontAwesomeIcon caretBias="false" fill="#ff6600d4" glyphName="PUZZLE_PIECE" layoutX="40.0" layoutY="68.0" size="40" />
                   <Text fx:id="transports" fill="WHITE" layoutX="138.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.0">
@@ -79,41 +79,33 @@
             </Pane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="Anchor_up1" layoutX="28.0" layoutY="242.0" prefHeight="431.0" prefWidth="371.0" styleClass="Anchor" stylesheets="@../../../StyleSheet/Home.css">
-         <effect>
-            <DropShadow />
-         </effect>
-         <children>
-            <AreaChart alternativeColumnFillVisible="true" layoutY="24.0" prefHeight="431.0" prefWidth="371.0" stylesheets="@../../../StyleSheet/Home.css" title="La quantité de stock" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-              <xAxis>
-                <CategoryAxis side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis side="LEFT" />
-              </yAxis>
-               <effect>
-                  <Glow />
-               </effect>
-            </AreaChart>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="Anchor_up2" layoutX="411.0" layoutY="242.0" prefHeight="431.0" prefWidth="420.0" styleClass="Anchor" stylesheets="@../../../StyleSheet/Home.css">
-         <effect>
-            <DropShadow />
-         </effect>
-         <children>
-            <BarChart layoutX="-30.0" layoutY="26.0" prefHeight="431.0" prefWidth="420.0" stylesheets="@../../../StyleSheet/Home.css" title="la hausse des prix des ingredients" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-              <xAxis>
-                <CategoryAxis side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis side="LEFT" />
-              </yAxis>
-               <effect>
-                  <Glow />
-               </effect>
-            </BarChart>
-         </children>
-      </AnchorPane>
+      <SplitPane dividerPositions="0.5" layoutX="28.0" layoutY="250.0" prefHeight="439.0" prefWidth="802.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <AreaChart layoutX="-135.0" layoutY="14.0" prefHeight="437.0" prefWidth="397.0" title="Comparaison des stocks par produit :" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                      <CategoryAxis label="Dates" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="Quantité en stock" side="LEFT" />
+                    </yAxis>
+                  </AreaChart>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="559.0">
+               <children>
+                  <BarChart layoutX="-81.0" layoutY="14.0" prefHeight="437.0" prefWidth="397.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>

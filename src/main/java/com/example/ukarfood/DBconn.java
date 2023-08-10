@@ -221,16 +221,24 @@ public class DBconn {
 
 
     public static class Stock {
+        private int id;
         private String nom_ingr;
         private int quantite;
         private double prix_total;
         private String date_achat;
 
-        public Stock(String nom_ingr, int quantite, int prix_total, String date_achat) {
+        public Stock(int id, String nom_ingr, int quantite, int prix_total, String date_achat) {
+            this.id = id;
             this.nom_ingr = nom_ingr;
             this.quantite = quantite;
             this.prix_total = prix_total;
             this.date_achat = date_achat;
+        }
+public void powerOf(Stage stage){
+            stage.close();
+}
+        public int getId() {
+            return id;
         }
 
         public String getNom_ingr() {
