@@ -68,7 +68,7 @@
             </Label>
             <Button layoutX="538.0" layoutY="186.0" mnemonicParsing="false" onMouseClicked="#btnEnregistrementAchat" prefHeight="32.0" prefWidth="185.0" text="Stocker l'Achat" />
             <Button layoutX="313.0" layoutY="72.0" mnemonicParsing="false" onMouseClicked="#FenetreFrnsAjout" text="Frns+" />
-            <Button layoutX="313.0" layoutY="118.0" mnemonicParsing="false" text="Ingr+" />
+            <Button layoutX="313.0" layoutY="118.0" mnemonicParsing="false" text="Ingr+" onMouseClicked="#FenetreCate"/>
          </children>
       </Pane>
       <DatePicker layoutX="250.0" layoutY="410.0" prefHeight="25.0" prefWidth="221.0" promptText="Search Date" />

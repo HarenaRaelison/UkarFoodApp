@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ukarfood.Controller.CategorieController">
+    <children>
+        <TextField fx:id="nom" layoutX="95.0" layoutY="130.0" prefHeight="31.0" prefWidth="228.0" promptText="Nom de catégorie" style="-fx-border-radius: 5px; -fx-background-color: transparent; -fx-border-color: #1291db; -fx-border-width: 2px 2px 2px 2px;">
+            <font>
+                <Font size="14.0" />
+            </font></TextField>
+        <TextField fx:id="descri" layoutX="95.0" layoutY="192.0" prefHeight="34.0" prefWidth="228.0" promptText="Description " style="-fx-background-color: transparent; -fx-border-color: #1291db; -fx-border-width: 2px 2px 2px 2px; -fx-border-radius: 5px;">
+            <font>
+                <Font size="14.0" />
+            </font></TextField>
+        <Button layoutX="154.0" layoutY="324.0" mnemonicParsing="false" onAction="#ajoutList" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #1291db;" text="Ajouter" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="105.0" prefWidth="417.0" style="-fx-background-color: #1291db;" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="131.0" layoutY="25.0" prefHeight="17.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="Ajout de Catégories" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="375.0" layoutY="43.0" onMouseClicked="#Fermer" size="23px" />
+            </children>
+        </Pane>
+    </children>
+   <effect>
+      <BoxBlur height="255.0" iterations="0" width="255.0" />
+   </effect>
+
+</AnchorPane>

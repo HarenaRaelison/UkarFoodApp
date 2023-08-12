@@ -234,9 +234,7 @@ public class DBconn {
             this.prix_total = prix_total;
             this.date_achat = date_achat;
         }
-public void powerOf(Stage stage){
-            stage.close();
-}
+
         public int getId() {
             return id;
         }
@@ -256,6 +254,29 @@ public void powerOf(Stage stage){
         public String getDate_achat() {
             return date_achat;
         }
+    }
+    public void powerOf(Stage stage){
+        stage.close();
+    }
+    public static class Ingredients {
+        private String nom_ingr;
+        private String descri;
+
+
+        public Ingredients(String nom_ingr, String descri ) {
+            this.descri = descri;
+            this.nom_ingr = nom_ingr;
+
+        }
+
+        public String getNom_ingr() {
+            return nom_ingr;
+        }
+        public String getDescri() {
+            return descri;
+        }
+
+
     }
 
 

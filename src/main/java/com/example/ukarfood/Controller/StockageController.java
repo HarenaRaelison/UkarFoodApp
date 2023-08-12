@@ -234,8 +234,7 @@ public class StockageController {
             }
         }
     }
-
-    private void showInfoAlert(String title, String message) {
+    public void showInfoAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);

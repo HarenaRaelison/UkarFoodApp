@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="700.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ukarfood.Controller.IngredientController">
     <Pane layoutY="-1.0" prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #1291db;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -10,4 +17,47 @@
             <FontAwesomeIcon fill="WHITE" glyphName="CUTLERY" layoutX="20.0" layoutY="41.0" selectionFill="#ffffff00" size="29px" text="  Ingrédients" wrappingWidth="215.0" />
         </children>
     </Pane>
+   <Text fill="#1291db" layoutX="320.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Ingredients" wrappingWidth="166.13671875">
+      <font>
+         <Font size="17.0" />
+      </font>
+   </Text>
+   <TableView fx:id="listIngre" layoutX="73.0" layoutY="238.0" prefHeight="409.0" prefWidth="618.0" />
+   <FontAwesomeIcon glyphName="REFRESH" layoutX="764.0" layoutY="418.0" onMouseClicked="#Actualiser" size="40px" text="">
+      <fill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="0.8175154328346252" blue="0.004629629664123058" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </FontAwesomeIcon>
+   <FontAwesomeIcon glyphName="PLUS" layoutX="766.0" layoutY="343.0" onMouseClicked="#AjoutClick" size="40px">
+      <fill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.2879999876022339" green="0.800000011920929" blue="0.3465142846107483" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </FontAwesomeIcon>
+   <ComboBox fx:id="BarRecherche" layoutX="155.0" layoutY="165.0" onAction="#RechercheFrns" prefHeight="30.0" prefWidth="497.0" promptText="Recherche par Categorie" style="-fx-background-radius: 5px; -fx-border-color: #1291db; -fx-font-size: 14px;" />
 </AnchorPane>

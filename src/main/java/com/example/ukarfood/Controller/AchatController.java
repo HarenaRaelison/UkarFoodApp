@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -154,5 +155,14 @@ public class AchatController {
     }
 
 
-
+    public void FenetreCate(MouseEvent mouseEvent) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/ukarfood/AjoutIngre.fxml"));
+        Scene scene = new Scene(loader.load());
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.show();
+        HelloApplication obj = new HelloApplication();
+        obj.setIcon(stage);
+    }
 }

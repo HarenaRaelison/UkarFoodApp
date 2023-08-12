@@ -13,4 +13,24 @@
     -fx-border-color: transparent;
     -fx-background-radius: 10px;
 }
+.chart-area-series {
+    -fx-stroke: #00ff00; /* Couleur de la ligne de la série */
+    -fx-fill: rgba(0, 255, 0, 0.5); /* Couleur de remplissage de la série */
+}
+
+.chart-legend {
+    -fx-background-color: #f0f0f0; /* Couleur de fond de la légende */
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: #d3d3d3; /* Couleur des lignes de grille horizontales */
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: #d3d3d3; /* Couleur des lignes de grille verticales */
+}
+
+.chart-alternative-row-fill {
+    -fx-background-color: #f5f5f5; /* Couleur de fond des rangées alternatives */
+}
 
