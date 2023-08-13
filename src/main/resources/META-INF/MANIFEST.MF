@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: com.example.ukarfood.HelloApplication
+JavaFX-Application-Class: com.example.ukarfood.HelloApplication
+JavaFX-Module-Path: D:\download\openjfx-20.0.1_windows-x64_bin-sdk (1)\javafx-sdk-20.0.1\lib
+JavaFX-Modules: javafx.controls,javafx.fxml
