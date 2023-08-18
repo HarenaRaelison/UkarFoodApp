@@ -6,32 +6,20 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.sql.*;
 
 public class DBconn {
-    String url = "jdbc:mysql://localhost:3308/ukarfood?characterEncoding=UTF-8";
-    String user = "root";
-    String mdp = "";
-    Connection Conn;
+    String url = "jdbc:mysql://192.168.88.16:3308/ukarfood?characterEncoding=UTF-8";
+    String user = "Harena";
+    String mdp = "passe0123";
+
+Connection Conn;
 
 
-    public void rechercheUser(TextField userRecherche, Text textValue) throws SQLException {
-        Conn = DriverManager.getConnection(url, user, mdp);
-        String txtRecherche = userRecherche.getText();
-        String query = "select password from user where username = ?";
-        PreparedStatement statement = Conn.prepareStatement(query);
-        statement.setString(1, txtRecherche);
-        ResultSet resultSet = statement.executeQuery();
-        if (resultSet.next()) {
-            textValue.setText("Votre mot de passe est :  " + resultSet.getString("password"));
-        } else {
-            textValue.setText("Le nom de l'utilisateur : " + txtRecherche + " n'est pas reconnu.");
-        }
 
-    }
+
 
 
 
@@ -81,13 +69,15 @@ public class DBconn {
         }
     }
 
-    public void register(TextField username, TextField password, TextField confirmePass){
+    public void register(TextField username, TextField password, TextField confirmePass,TextField mot_oublier){
         String Name = username.getText();
         String Pass = password.getText();
         String confPass = confirmePass.getText();
+        String mot = mot_oublier.getText();
 
 
-        if (Name.isEmpty() || Pass.isEmpty() || confPass.isEmpty()) {
+
+        if (Name.isEmpty() || Pass.isEmpty() || confPass.isEmpty()|| mot.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erreur");
             alert.setHeaderText(null);
@@ -110,10 +100,11 @@ public class DBconn {
         }
 
         try(Connection conn = DriverManager.getConnection(url, user, mdp);
-            PreparedStatement statement = conn.prepareStatement("INSERT INTO user (username, password) VALUES (?, ?)")) {
+            PreparedStatement statement = conn.prepareStatement("INSERT INTO user (username, password,mot_oublier) VALUES (?, ?, ?)")) {
 
             statement.setString(1, Name);
             statement.setString(2, Pass);
+            statement.setString(3,mot);
 
 
             int affectedRows = statement.executeUpdate();
@@ -122,6 +113,7 @@ public class DBconn {
                 username.setText("");
                 password.setText("");
                 confirmePass.setText("");
+                mot_oublier.setText("");
             } else {
                 System.out.println("No rows affected");
             }

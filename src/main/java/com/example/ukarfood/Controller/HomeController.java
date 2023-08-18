@@ -23,12 +23,17 @@ public class HomeController {
 
     @FXML
     private NumberAxis yAxis;
-    String url = "jdbc:mysql://localhost:3308/ukarfood?characterEncoding=UTF-8";
-    String user = "root";
-    String mdp = "";
-    Connection Conn;
+    String url = "jdbc:mysql://192.168.88.16:3308/ukarfood?characterEncoding=UTF-8";
+    String user = "Harena";  // Utilisateur que vous avez créé
+    String mdp = "passe0123";  // Mot de passe de l'utilisateur que vous avez créé
+
+    Connection Conn = DriverManager.getConnection(url,user,mdp);
+
+    public HomeController() throws SQLException {
+    }
+
     public void initialize() throws SQLException {
-        Conn = DriverManager.getConnection(url,user,mdp);
+
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         XYChart.Series<String, Number> series1 = new XYChart.Series<>();
         String req ="SELECT nom_ingr, SUM(quantite) AS total_quantite FROM ingredients " +
@@ -51,7 +56,7 @@ public class HomeController {
         nombre_user(nombre_users);
     }
     public void nombre_user(Text number) throws SQLException {
-        Connection Conn = DriverManager.getConnection(url,user,mdp);
+
         String req = "select count(*) from user";
         PreparedStatement statement = Conn.prepareStatement(req);
         ResultSet res = statement.executeQuery();

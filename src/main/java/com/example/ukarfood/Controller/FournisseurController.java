@@ -21,9 +21,15 @@ public class FournisseurController {
     public TableView listView;
     @FXML private TextField BarRecherche;
 
-    String url = "jdbc:mysql://localhost:3308/ukarfood?characterEncoding=UTF-8";
-    String user = "root";
-    String mdp = "";
+    String url = "jdbc:mysql://192.168.88.16:3308/ukarfood?characterEncoding=UTF-8";
+    String user = "Harena";  // Utilisateur que vous avez créé
+    String mdp = "passe0123";  // Mot de passe de l'utilisateur que vous avez créé
+
+    Connection Conn = DriverManager.getConnection(url,user,mdp);
+
+    public FournisseurController() throws SQLException {
+    }
+
     @FXML
     public void initialize() throws SQLException {
         TableColumn<String, String> nomColumn = new TableColumn<>("Nom");
@@ -63,7 +69,7 @@ public class FournisseurController {
         if (selectedFournisseur != null) {
             String name = selectedFournisseur.getNom();
             String query = "SELECT id_frns FROM fournisseur WHERE Nom_frns = ? ";
-            Connection Conn = DriverManager.getConnection(url, user, mdp);
+
             PreparedStatement statement = Conn.prepareStatement(query);
             statement.setString(1, name);
             ResultSet res = statement.executeQuery();
@@ -161,7 +167,7 @@ if(BarRecherche.getText().equals("")){
     DBconn obj = new DBconn();
     obj.ActualisationList(listView);
 }else{
-    Connection Conn = DriverManager.getConnection(url, user, mdp);
+
     String req = "SELECT * FROM fournisseur WHERE Nom_frns LIKE ?";
     PreparedStatement statement = Conn.prepareStatement(req);
     statement.setString(1,BarRecherche.getText()+"%");

@@ -8,11 +8,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ukarfood.Controller.RegisterController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ukarfood.Controller.RegisterController">
    <left>
        <AnchorPane prefHeight="400.0" prefWidth="219.0" style="-fx-background-color: #1291db;" BorderPane.alignment="CENTER">
            <ImageView disable="true" fitHeight="150.0" fitWidth="150.0" layoutX="35.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
@@ -21,7 +20,7 @@
        </AnchorPane>
    </left>
    <center>
-       <AnchorPane prefHeight="400.0" prefWidth="460.0" BorderPane.alignment="CENTER">
+       <AnchorPane prefHeight="400.0" prefWidth="635.0" BorderPane.alignment="CENTER">
            <TextField fx:id="username" layoutX="113.0" layoutY="90.0" promptText="Create Username" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #1291db; -fx-background-color: transparent; -fx-font-size: 14px;">
             <cursor>
                <Cursor fx:constant="TEXT" />
@@ -34,7 +33,7 @@
             <cursor>
                <Cursor fx:constant="TEXT" />
             </cursor></TextField>
-           <Button layoutX="87.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleCreate" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #1291db;" text="Create" textFill="WHITE">
+           <Button layoutX="91.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleCreate" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #1291db;" text="Create" textFill="WHITE">
               <font>
                   <Font size="14.0" />
               </font>
@@ -42,7 +41,7 @@
                <Cursor fx:constant="OPEN_HAND" />
             </cursor>
            </Button>
-           <Button layoutX="232.0" layoutY="286.0" mnemonicParsing="false" onAction="#Fermer" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #1291db;" text="Back" textFill="WHITE">
+           <Button layoutX="255.0" layoutY="330.0" mnemonicParsing="false" onAction="#Fermer" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #1291db;" text="Back" textFill="WHITE">
               <font>
                   <Font size="14.0" />
               </font>
@@ -55,30 +54,11 @@
                   <Font size="20.0" />
               </font>
            </Text>
-           <ImageView fx:id="imageView" disable="true" fitHeight="150.0" fitWidth="150.0" layoutX="408.0" layoutY="50.0" opacity="0.44"
-                      pickOnBounds="true" preserveRatio="true">
-               <cursor>
-                   <Cursor fx:constant="TEXT"/>
-               </cursor>
-               <Image url="@../../../images/pinterestdownloader.com-1688543534.358196.jpg"/>
-           </ImageView>
-         <TextField layoutX="360.0" layoutY="239.0" prefHeight="30.0" prefWidth="191.0" promptText="browse and select an image" style="-fx-background-color: transparent; -fx-border-color: #1291db;">
-            <font>
-               <Font size="14.0" />
-            </font>
+         <TextField fx:id="motOublier" layoutX="113.0" layoutY="258.0" promptText="Mot de mémorisation" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #1291db; -fx-background-color: transparent; -fx-font-size: 14px;">
             <cursor>
                <Cursor fx:constant="TEXT" />
             </cursor>
          </TextField>
-         <Button layoutX="551.0" layoutY="240.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="63.0" style="-fx-background-color: #1291db;" text="Browse" textFill="WHITE" onAction="#Selectimage">
-            <font>
-               <Font size="14.0" />
-            </font>
-            <cursor>
-               <Cursor fx:constant="OPEN_HAND" />
-            </cursor>
-         </Button>
-         <Line endX="201.0" layoutX="281.0" layoutY="198.0" rotate="90.0" startX="-100.0" stroke="#1291db" AnchorPane.bottomAnchor="201.5" AnchorPane.topAnchor="197.5" />
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

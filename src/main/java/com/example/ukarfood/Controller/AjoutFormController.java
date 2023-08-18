@@ -12,9 +12,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class AjoutFormController {
-    String url = "jdbc:mysql://localhost:3308/ukarfood?characterEncoding=UTF-8";
-    String user = "root";
-    String mdp = "";
+    String url = "jdbc:mysql://192.168.88.16:3308/ukarfood?characterEncoding=UTF-8";
+    String user = "Harena";  // Utilisateur que vous avez créé
+    String mdp = "passe0123";  // Mot de passe de l'utilisateur que vous avez créé
+
+    Connection Conn = DriverManager.getConnection(url,user,mdp);
+
     @FXML
     public TextField nom;
     @FXML
@@ -24,6 +27,9 @@ public class AjoutFormController {
 
     private MenuController menuController;
     private FournisseurController fournisseurController;
+
+    public AjoutFormController() throws SQLException {
+    }
 
 
     public void setMenuController(MenuController menuController) {
@@ -43,7 +49,7 @@ public class AjoutFormController {
     String adresse = adress.getText();
     String tele =  tel.getText();
 
-            Connection Conn = DriverManager.getConnection(url,user,mdp);
+
             String sql = "INSERT INTO fournisseur (Nom_frns,adrs_frns,tel_frns) VALUES (?,?,?)";
 
             PreparedStatement statement = Conn.prepareStatement(sql);

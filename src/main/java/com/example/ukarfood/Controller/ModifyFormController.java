@@ -17,9 +17,11 @@ public class ModifyFormController {
         this.Id = id;
     }
 
-    String url = "jdbc:mysql://localhost:3308/ukarfood?characterEncoding=UTF-8";
-    String user = "root";
-    String mdp = "";
+    String url = "jdbc:mysql://192.168.88.16:3308/ukarfood?characterEncoding=UTF-8";
+    String user = "Harena";  // Utilisateur que vous avez créé
+    String mdp = "passe0123";  // Mot de passe de l'utilisateur que vous avez créé
+
+
 
     @FXML
     public void RemplirChaine() throws SQLException {
