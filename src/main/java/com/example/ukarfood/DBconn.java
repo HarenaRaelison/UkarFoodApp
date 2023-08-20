@@ -16,13 +16,6 @@ public class DBconn {
     String mdp = "passe0123";
 
 Connection Conn;
-
-
-
-
-
-
-
     public void CheckLogin(TextField userField, PasswordField passField, Stage p) {
         PreparedStatement statement;
         ResultSet resultSet;
